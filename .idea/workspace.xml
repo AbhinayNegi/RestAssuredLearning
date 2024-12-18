@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40292718-d6e6-4afd-8f84-198a0c05a0fb" name="Changes" comment="Updated git ignore">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="40292718-d6e6-4afd-8f84-198a0c05a0fb" name="Changes" comment="updated git ignore file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/abhinay/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/abhinay/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/userManagement/GetUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/userManagement/GetUsers.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,9 +23,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2qNGIIus9m9xyFbCMtQrVGWGnEe" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -41,6 +39,7 @@
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "TestNG.GetUsers.getUserData.executor": "Run",
+    "TestNG.GetUsers.validateGetResponseBody.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true"
   }
@@ -50,7 +49,7 @@
       <recent name="C:\Work\Java\Rest Assured Learning" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.GetUsers.validateGetResponseBody">
     <configuration name="GetUsers.getUserData" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssuredLearning" />
       <extension name="coverage">
@@ -69,8 +68,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GetUsers.validateGetResponseBody" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestAssuredLearning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="userManagement.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="userManagement" />
+      <option name="MAIN_CLASS_NAME" value="userManagement.GetUsers" />
+      <option name="METHOD_NAME" value="validateGetResponseBody" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.GetUsers.validateGetResponseBody" />
         <item itemvalue="TestNG.GetUsers.getUserData" />
       </list>
     </recent_temporary>
@@ -100,12 +118,30 @@
       <option name="project" value="LOCAL" />
       <updated>1734496816168</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added get user test and updated git ignore file">
+      <option name="closed" value="true" />
+      <created>1734499398658</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1734499398658</updated>
+    </task>
+    <task id="LOCAL-00004" summary="updated git ignore file">
+      <option name="closed" value="true" />
+      <created>1734499426772</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1734499426772</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Updated git ignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated git ignore" />
+    <MESSAGE value="Added get user test and updated git ignore file" />
+    <MESSAGE value="updated git ignore file" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated git ignore file" />
   </component>
 </project>

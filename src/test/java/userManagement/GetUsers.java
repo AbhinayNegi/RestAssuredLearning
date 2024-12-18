@@ -1,8 +1,10 @@
 package userManagement;
 
+import io.restassured.RestAssured;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.*;
 
 public class GetUsers {
 
@@ -15,4 +17,21 @@ public class GetUsers {
                 .assertThat()
                 .statusCode(200);
     }
+
+    @Test
+    public void validateGetResponseBody() {
+
+        given()
+                .baseUri("https://jsonplaceholder.typicode.com")
+                .when()
+                .get("/posts/1")
+                .then()
+                .statusCode(200)
+                .assertThat()
+                .body(not(emptyString()))
+                .body("userId", equalTo(1))
+                .body("id", equalTo(1))
+                .body("title", containsString("sunt aut facere"));
+    }
+
 }
