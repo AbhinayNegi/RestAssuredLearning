@@ -115,4 +115,5 @@ public class GetUsers {
 
         response.then().body("data[0].id", is(7));
     }
+
 }
