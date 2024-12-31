@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40292718-d6e6-4afd-8f84-198a0c05a0fb" name="Changes" comment="Added Validating get response body test">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/userManagement/GetUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/userManagement/GetUsers.java" afterDir="false" />
     </list>
@@ -38,15 +37,22 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "Maven.RestAssuredLearning [clean].executor": "Run",
+    "Maven.RestAssuredLearning [validate].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "TestNG.GetUsers.extractingResponse.executor": "Run",
+    "TestNG.GetUsers.formData.executor": "Run",
     "TestNG.GetUsers.getUserData.executor": "Run",
+    "TestNG.GetUsers.pathParameter.executor": "Run",
     "TestNG.GetUsers.validateGetResponseBody.executor": "Run",
     "TestNG.GetUsers.verifyEmailContainsInSpecificOrder.executor": "Run",
     "TestNG.GetUsers.verifySpecificData.executor": "Run",
     "TestNG.GetUsers.verifyTheCommentSize.executor": "Run",
     "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true"
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Work/RestAssuredLearning"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -54,8 +60,8 @@
       <recent name="C:\Work\Java\Rest Assured Learning" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.GetUsers.verifySpecificData">
-    <configuration name="GetUsers.extractingResponse" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.GetUsers.formData">
+    <configuration name="GetUsers.formData" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssuredLearning" />
       <extension name="coverage">
         <pattern>
@@ -65,7 +71,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="userManagement" />
       <option name="MAIN_CLASS_NAME" value="userManagement.GetUsers" />
-      <option name="METHOD_NAME" value="extractingResponse" />
+      <option name="METHOD_NAME" value="formData" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -73,7 +79,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetUsers.validateGetResponseBody" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="GetUsers.pathParameter" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssuredLearning" />
       <extension name="coverage">
         <pattern>
@@ -83,7 +89,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="userManagement" />
       <option name="MAIN_CLASS_NAME" value="userManagement.GetUsers" />
-      <option name="METHOD_NAME" value="validateGetResponseBody" />
+      <option name="METHOD_NAME" value="pathParameter" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -147,11 +153,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.GetUsers.formData" />
+        <item itemvalue="TestNG.GetUsers.pathParameter" />
         <item itemvalue="TestNG.GetUsers.verifySpecificData" />
         <item itemvalue="TestNG.GetUsers.verifyEmailContainsInSpecificOrder" />
         <item itemvalue="TestNG.GetUsers.verifyTheCommentSize" />
-        <item itemvalue="TestNG.GetUsers.extractingResponse" />
-        <item itemvalue="TestNG.GetUsers.validateGetResponseBody" />
       </list>
     </recent_temporary>
   </component>
