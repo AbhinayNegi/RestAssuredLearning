@@ -2,6 +2,8 @@ package userManagement;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import io.restassured.http.Header;
+import io.restassured.http.Headers;
 import io.restassured.response.Response;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -148,10 +150,128 @@ public class GetUsers {
         formParams.put("foo2", "bar2");
 
         Response response = given()
+                .baseUri(postmanEchoBaseUri)
                 .contentType("application/x-www-form-urlencoded; charset=UTF-8")
                 .formParams(formParams)
                 .when()
-                .post("https://postman-echo.com/post");
+                .post("/post")
+                .then()
+                .statusCode(200)
+                .extract().response();
+
+
+        System.out.println(response.then().log().all());
+    }
+
+    @Test(description = "Single header")
+    public void addHeader() {
+
+        Response response;
+
+        response = given()
+                .baseUri(postmanEchoBaseUri)
+                .header("my-sample-header", "Hello this my single header")
+                .when()
+                .get("/headers")
+                .then()
+                .statusCode(200)
+                .extract().response();
+        System.out.println(response.then().log().all());
+    }
+
+    @Test(description = "Sending multiple header")
+    public void addHeaders() {
+
+        Map<String, String> headers = new HashMap<>();
+
+        headers.put("Accept-Encoding", "gzip, deflate, br");
+        headers.put("my-sample-header", "This is second header");
+
+        Response response;
+        response = given()
+                .baseUri(postmanEchoBaseUri)
+                .headers(headers)
+                .when()
+                .get("/headers")
+                .then()
+                .statusCode(200)
+                .extract().response();
+
+        System.out.println(response.then().log().all());
+    }
+
+    @Test(description = "Verifying headers from the response")
+    public void verifyHeader() {
+
+        Map<String, String> queryString = new HashMap<>();
+        queryString.put("foo1", "bar1");
+        queryString.put("foo2", "bar2");
+
+        Response response;
+
+        response = given()
+                .baseUri(postmanEchoBaseUri)
+                .queryParams(queryString)
+                .when()
+                .get("/response-headers");
+
+        Headers headers = response.headers();
+        for(Header current : headers) {
+            if(current.getName().contains("Server") && current.getValue().equals("nginx")) {
+                System.out.println(current.getName() + " : " + current.getValue());
+            }
+        }
+        System.out.println("Passed verifyHeader test");
+    }
+
+    @Test(description = "Verifying single header")
+    public void verifySingleHeader() {
+
+        Map<String, String> queryString = new HashMap<>();
+        queryString.put("foo1", "bar1");
+        queryString.put("foo2", "bar2");
+
+        Response response;
+
+        response = given()
+                .baseUri(postmanEchoBaseUri)
+                .queryParams(queryString)
+                .when()
+                .get("/response-headers");
+
+        String value = response.getHeader("Server");
+        System.out.println(value);
+    }
+
+    @Test(description = "Setting cookies without map")
+    public void sendCookie() {
+
+        Response response;
+
+        response = given()
+                .baseUri(postmanEchoBaseUri)
+                .cookie("foo1", "bar1")
+                .cookie("foo2", "bar2")
+                .when()
+                .get("/cookies/set");
+
+        System.out.println(response.then().log().all());
+    }
+
+    @Test(description = "Setting cookies with map")
+    public void sendCookieV2() {
+
+        Response response;
+
+        Map<String, String> cookies = new HashMap<>();
+        cookies.put("foo1", "bar1");
+        cookies.put("foo2", "bar2");
+
+        response = given()
+                .baseUri(postmanEchoBaseUri)
+                .cookies(cookies)
+                .when()
+                .get("/cookies/set");
 
         System.out.println(response.then().log().all());
     }
