@@ -1,5 +1,6 @@
 package userManagement;
 
+import core.StatusCodeEnum;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.http.Header;
@@ -337,4 +338,36 @@ public class GetUsers {
         System.out.println(response.then().log().all());
         response.then().body("authenticated", equalTo(true));
     }
+
+    @Test(description = "Basic auth")
+    public void digestAuthentication() {
+
+        Response response;
+
+        response = given()
+                .baseUri(postmanEchoBaseUri)
+                .auth()
+                .basic("postman", "password")
+                .when()
+                .get("/digest-auth");
+
+        assertThat(response.statusCode(), equalTo(200));
+        System.out.println(response.then().log().all());
+        response.then().body("authenticated", equalTo(true));
+    }
+
+    @Test(description = "Delete")
+    public void deleteData() {
+
+        Response response;
+
+        response = given()
+                .baseUri(postmanEchoBaseUri)
+                .when()
+                .delete("/delete")
+                .then()
+                .statusCode(StatusCodeEnum.SUCCESS.code)
+                .extract().response();
+    }
+
 }

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40292718-d6e6-4afd-8f84-198a0c05a0fb" name="Changes" comment="Worked on cookies and header">
+    <list default="true" id="40292718-d6e6-4afd-8f84-198a0c05a0fb" name="Changes" comment="Worked on cookies and basic auth">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/userManagement/GetUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/userManagement/GetUsers.java" afterDir="false" />
     </list>
@@ -17,6 +17,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -44,6 +45,8 @@
     "TestNG.GetUsers.addHeader.executor": "Run",
     "TestNG.GetUsers.addHeaders.executor": "Run",
     "TestNG.GetUsers.basicAuthentication.executor": "Run",
+    "TestNG.GetUsers.deleteData.executor": "Run",
+    "TestNG.GetUsers.digestAuthentication.executor": "Run",
     "TestNG.GetUsers.executor": "Run",
     "TestNG.GetUsers.extractingResponse.executor": "Run",
     "TestNG.GetUsers.formData.executor": "Run",
@@ -69,7 +72,7 @@
       <recent name="C:\Work\Java\Rest Assured Learning" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.GetUsers.basicAuthentication">
+  <component name="RunManager" selected="TestNG.GetUsers.deleteData">
     <configuration name="GetUsers" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssuredLearning" />
       <extension name="coverage">
@@ -105,6 +108,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GetUsers.deleteData" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestAssuredLearning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="userManagement.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="userManagement" />
+      <option name="MAIN_CLASS_NAME" value="userManagement.GetUsers" />
+      <option name="METHOD_NAME" value="deleteData" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetUsers.digestAuthentication" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestAssuredLearning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="userManagement.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="userManagement" />
+      <option name="MAIN_CLASS_NAME" value="userManagement.GetUsers" />
+      <option name="METHOD_NAME" value="digestAuthentication" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GetUsers.getCookies" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssuredLearning" />
       <extension name="coverage">
@@ -123,49 +162,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetUsers.sendCookie" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="RestAssuredLearning" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="userManagement.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="userManagement" />
-      <option name="MAIN_CLASS_NAME" value="userManagement.GetUsers" />
-      <option name="METHOD_NAME" value="sendCookie" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GetUsers.sendCookieV2" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="RestAssuredLearning" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="userManagement.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="userManagement" />
-      <option name="MAIN_CLASS_NAME" value="userManagement.GetUsers" />
-      <option name="METHOD_NAME" value="sendCookieV2" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.GetUsers.deleteData" />
+        <item itemvalue="TestNG.GetUsers.digestAuthentication" />
         <item itemvalue="TestNG.GetUsers.basicAuthentication" />
         <item itemvalue="TestNG.GetUsers" />
         <item itemvalue="TestNG.GetUsers.getCookies" />
-        <item itemvalue="TestNG.GetUsers.sendCookie" />
-        <item itemvalue="TestNG.GetUsers.sendCookieV2" />
       </list>
     </recent_temporary>
   </component>
@@ -234,7 +237,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735799275454</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Worked on cookies and basic auth">
+      <option name="closed" value="true" />
+      <created>1736829892009</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1736829892009</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -245,6 +256,7 @@
     <MESSAGE value="Added Validating get response body test" />
     <MESSAGE value="Form request" />
     <MESSAGE value="Worked on cookies and header" />
-    <option name="LAST_COMMIT_MESSAGE" value="Worked on cookies and header" />
+    <MESSAGE value="Worked on cookies and basic auth" />
+    <option name="LAST_COMMIT_MESSAGE" value="Worked on cookies and basic auth" />
   </component>
 </project>
