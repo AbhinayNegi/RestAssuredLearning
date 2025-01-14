@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40292718-d6e6-4afd-8f84-198a0c05a0fb" name="Changes" comment="Working with headers">
+    <list default="true" id="40292718-d6e6-4afd-8f84-198a0c05a0fb" name="Changes" comment="Worked on cookies and header">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/userManagement/GetUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/userManagement/GetUsers.java" afterDir="false" />
     </list>
@@ -43,11 +43,15 @@
     "RunOnceActivity.git.unshallow": "true",
     "TestNG.GetUsers.addHeader.executor": "Run",
     "TestNG.GetUsers.addHeaders.executor": "Run",
+    "TestNG.GetUsers.basicAuthentication.executor": "Run",
+    "TestNG.GetUsers.executor": "Run",
     "TestNG.GetUsers.extractingResponse.executor": "Run",
     "TestNG.GetUsers.formData.executor": "Run",
+    "TestNG.GetUsers.getCookies.executor": "Run",
     "TestNG.GetUsers.getUserData.executor": "Run",
     "TestNG.GetUsers.pathParameter.executor": "Run",
     "TestNG.GetUsers.sendCookie.executor": "Run",
+    "TestNG.GetUsers.sendCookieV2.executor": "Run",
     "TestNG.GetUsers.validateGetResponseBody.executor": "Run",
     "TestNG.GetUsers.verifyEmailContainsInSpecificOrder.executor": "Run",
     "TestNG.GetUsers.verifyHeader.executor": "Run",
@@ -57,7 +61,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Work/RestAssuredLearning"
+    "last_opened_file_path": "C:/Work/framework_skeleton"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -65,8 +69,8 @@
       <recent name="C:\Work\Java\Rest Assured Learning" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.GetUsers.sendCookie">
-    <configuration name="GetUsers.addHeaders" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.GetUsers.basicAuthentication">
+    <configuration name="GetUsers" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssuredLearning" />
       <extension name="coverage">
         <pattern>
@@ -76,7 +80,42 @@
       </extension>
       <option name="PACKAGE_NAME" value="userManagement" />
       <option name="MAIN_CLASS_NAME" value="userManagement.GetUsers" />
-      <option name="METHOD_NAME" value="addHeaders" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetUsers.basicAuthentication" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestAssuredLearning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="userManagement.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="userManagement" />
+      <option name="MAIN_CLASS_NAME" value="userManagement.GetUsers" />
+      <option name="METHOD_NAME" value="basicAuthentication" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetUsers.getCookies" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestAssuredLearning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="userManagement.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="userManagement" />
+      <option name="MAIN_CLASS_NAME" value="userManagement.GetUsers" />
+      <option name="METHOD_NAME" value="getCookies" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -120,49 +159,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetUsers.verifyHeader" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="RestAssuredLearning" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="userManagement.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="userManagement" />
-      <option name="MAIN_CLASS_NAME" value="userManagement.GetUsers" />
-      <option name="METHOD_NAME" value="verifyHeader" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GetUsers.verifySingleHeader" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="RestAssuredLearning" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="userManagement.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="userManagement" />
-      <option name="MAIN_CLASS_NAME" value="userManagement.GetUsers" />
-      <option name="METHOD_NAME" value="verifySingleHeader" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.GetUsers.basicAuthentication" />
+        <item itemvalue="TestNG.GetUsers" />
+        <item itemvalue="TestNG.GetUsers.getCookies" />
         <item itemvalue="TestNG.GetUsers.sendCookie" />
         <item itemvalue="TestNG.GetUsers.sendCookieV2" />
-        <item itemvalue="TestNG.GetUsers.verifySingleHeader" />
-        <item itemvalue="TestNG.GetUsers.verifyHeader" />
-        <item itemvalue="TestNG.GetUsers.addHeaders" />
       </list>
     </recent_temporary>
   </component>
@@ -223,7 +226,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735621734578</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Worked on cookies and header">
+      <option name="closed" value="true" />
+      <created>1735799275454</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1735799275454</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -233,6 +244,7 @@
     <MESSAGE value="updated git ignore file" />
     <MESSAGE value="Added Validating get response body test" />
     <MESSAGE value="Form request" />
-    <option name="LAST_COMMIT_MESSAGE" value="Form request" />
+    <MESSAGE value="Worked on cookies and header" />
+    <option name="LAST_COMMIT_MESSAGE" value="Worked on cookies and header" />
   </component>
 </project>

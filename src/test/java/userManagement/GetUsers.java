@@ -264,8 +264,8 @@ public class GetUsers {
         Response response;
 
         Map<String, String> cookies = new HashMap<>();
-        cookies.put("foo1", "bar1");
-        cookies.put("foo2", "bar2");
+        cookies.put("id", "1023");
+        cookies.put("session", "2938730kfdj");
 
         response = given()
                 .baseUri(postmanEchoBaseUri)
@@ -274,5 +274,67 @@ public class GetUsers {
                 .get("/cookies/set");
 
         System.out.println(response.then().log().all());
+    }
+
+    @Test(description = "Getting single cookies")
+    public void getCookie() {
+        Response response;
+        Map<String, String> cookies = new HashMap<>();
+        cookies.put("id", "krim");
+        cookies.put("session", "2003");
+
+        response = given()
+                .baseUri(postmanEchoBaseUri)
+                .cookies(cookies)
+                .when()
+                .get("/cookies");
+
+        String id = response.getCookie("sails.sid");
+
+        System.out.println(id);
+        System.out.println(response.then().log().all());
+    }
+
+    @Test(description = "Getting cookies")
+    public void getCookies() {
+        Response response;
+        Map<String, String> cookies = new HashMap<>();
+        cookies.put("id", "krim");
+        cookies.put("session", "2003");
+
+        response = given()
+                .baseUri(postmanEchoBaseUri)
+                .cookies(cookies)
+                .when()
+                .get("/cookies");
+
+        cookies = response.getCookies();
+
+        assertThat(cookies, hasKey("sails.sid"));
+        response.then().cookie("sails.sid", notNullValue());
+//        response.then().cookie("sails.sid", "hello")''
+
+        for(Map.Entry<String, String> entry : cookies.entrySet()) {
+            System.out.println("Printing cookies");
+            System.out.println(entry.getValue());
+        }
+        System.out.println(response.then().log().all());
+    }
+
+    @Test(description = "Basic auth")
+    public void basicAuthentication() {
+
+        Response response;
+
+        response = given()
+                .baseUri(postmanEchoBaseUri)
+                .auth()
+                .basic("postman", "password")
+                .when()
+                .get("/basic-auth");
+
+        assertThat(response.statusCode(), equalTo(200));
+        System.out.println(response.then().log().all());
+        response.then().body("authenticated", equalTo(true));
     }
 }
