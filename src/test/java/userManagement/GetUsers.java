@@ -6,9 +6,13 @@ import io.restassured.http.ContentType;
 import io.restassured.http.Header;
 import io.restassured.http.Headers;
 import io.restassured.response.Response;
+import org.json.simple.parser.ParseException;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import utility.JsonReader;
+import utility.PropertyReader;
 
+import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -340,14 +344,19 @@ public class GetUsers {
     }
 
     @Test(description = "Basic auth")
-    public void digestAuthentication() {
+    public void digestAuthentication() throws IOException, ParseException {
+
+        String user = JsonReader.getTestData("username");
+        String password = JsonReader.getTestData("password");
+
+        System.out.println(user + " : " + password);
 
         Response response;
 
         response = given()
                 .baseUri(postmanEchoBaseUri)
                 .auth()
-                .basic("postman", "password")
+                .basic(user, password)
                 .when()
                 .get("/digest-auth");
 
@@ -359,10 +368,12 @@ public class GetUsers {
     @Test(description = "Delete")
     public void deleteData() {
 
+        String baseUrl = PropertyReader.getValue("config.properties", "postmanEchoBaseUrl");
+        System.out.println("Base url is : " + baseUrl);
         Response response;
 
         response = given()
-                .baseUri(postmanEchoBaseUri)
+                .baseUri(baseUrl)
                 .when()
                 .delete("/delete")
                 .then()
