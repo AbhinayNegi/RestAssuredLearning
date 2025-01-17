@@ -365,20 +365,21 @@ public class GetUsers {
         response.then().body("authenticated", equalTo(true));
     }
 
-    @Test(description = "Delete")
-    public void deleteData() {
+    @Test(description = "Delete combining json reader and property reader data to form url")
+    public void deleteData() throws IOException, ParseException {
 
         String baseUrl = PropertyReader.getValue("config.properties", "postmanEchoBaseUrl");
-        System.out.println("Base url is : " + baseUrl);
+        String endpoint = JsonReader.getTestData("deleteEndpoint");
+        String url = baseUrl + endpoint;
+
+        System.out.println("url is : " + url);
         Response response;
 
         response = given()
-                .baseUri(baseUrl)
                 .when()
-                .delete("/delete")
+                .delete(url)
                 .then()
                 .statusCode(StatusCodeEnum.SUCCESS.code)
                 .extract().response();
     }
-
 }

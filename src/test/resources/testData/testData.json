@@ -1,4 +1,7 @@
 {
   "username": "postman",
-  "password": "password"
+  "password": "password",
+  "deleteEndpoint": "/delete",
+  "reqresLoginEndpoint" : "/api/login",
+  "reqresUsersEndpoint": "/api/users"
 }

@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40292718-d6e6-4afd-8f84-198a0c05a0fb" name="Changes" comment="Created status code enum">
+    <list default="true" id="40292718-d6e6-4afd-8f84-198a0c05a0fb" name="Changes" comment="Created utility file to read test data from json and property file. Created a json test data file and a config.properties file. Updated test to get data from test files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/userManagement/GetUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/userManagement/GetUsers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testData/testData.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testData/testData.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,45 +37,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.RestAssuredLearning [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.RestAssuredLearning [validate].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;TestNG.GetUsers.addHeader.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.GetUsers.addHeaders.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.GetUsers.basicAuthentication.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.GetUsers.deleteData.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.GetUsers.digestAuthentication.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.GetUsers.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.GetUsers.extractingResponse.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.GetUsers.formData.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.GetUsers.getCookies.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.GetUsers.getUserData.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.GetUsers.pathParameter.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.GetUsers.sendCookie.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.GetUsers.sendCookieV2.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.GetUsers.validateGetResponseBody.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.GetUsers.verifyEmailContainsInSpecificOrder.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.GetUsers.verifyHeader.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.GetUsers.verifySingleHeader.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.GetUsers.verifySpecificData.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.GetUsers.verifyTheCommentSize.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Work/framework_skeleton&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "Maven.RestAssuredLearning [clean].executor": "Run",
+    "Maven.RestAssuredLearning [validate].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "TestNG.AssertionTry.verifySomething.executor": "Run",
+    "TestNG.DataProvider.searchUser.executor": "Run",
+    "TestNG.GetUsers.addHeader.executor": "Run",
+    "TestNG.GetUsers.addHeaders.executor": "Run",
+    "TestNG.GetUsers.basicAuthentication.executor": "Run",
+    "TestNG.GetUsers.deleteData.executor": "Run",
+    "TestNG.GetUsers.digestAuthentication.executor": "Run",
+    "TestNG.GetUsers.executor": "Run",
+    "TestNG.GetUsers.extractingResponse.executor": "Run",
+    "TestNG.GetUsers.formData.executor": "Run",
+    "TestNG.GetUsers.getCookies.executor": "Run",
+    "TestNG.GetUsers.getUserData.executor": "Run",
+    "TestNG.GetUsers.pathParameter.executor": "Run",
+    "TestNG.GetUsers.sendCookie.executor": "Run",
+    "TestNG.GetUsers.sendCookieV2.executor": "Run",
+    "TestNG.GetUsers.validateGetResponseBody.executor": "Run",
+    "TestNG.GetUsers.verifyEmailContainsInSpecificOrder.executor": "Run",
+    "TestNG.GetUsers.verifyHeader.executor": "Run",
+    "TestNG.GetUsers.verifySingleHeader.executor": "Run",
+    "TestNG.GetUsers.verifySpecificData.executor": "Run",
+    "TestNG.GetUsers.verifyTheCommentSize.executor": "Run",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Work/framework_skeleton"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Work\Java\Rest Assured Learning" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="utility" />
+    </key>
   </component>
-  <component name="RunManager" selected="TestNG.GetUsers.deleteData">
-    <configuration name="GetUsers" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.DataProvider.searchUser">
+    <configuration name="AssertionTry.verifySomething" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssuredLearning" />
       <extension name="coverage">
         <pattern>
@@ -84,8 +89,27 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="userManagement" />
-      <option name="MAIN_CLASS_NAME" value="userManagement.GetUsers" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="userManagement.AssertionTry" />
+      <option name="METHOD_NAME" value="verifySomething" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DataProvider.searchUser" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestAssuredLearning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="userManagement.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="userManagement" />
+      <option name="MAIN_CLASS_NAME" value="userManagement.DataProvider" />
+      <option name="METHOD_NAME" value="searchUser" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -146,31 +170,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetUsers.getCookies" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="RestAssuredLearning" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="userManagement.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="userManagement" />
-      <option name="MAIN_CLASS_NAME" value="userManagement.GetUsers" />
-      <option name="METHOD_NAME" value="getCookies" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.DataProvider.searchUser" />
+        <item itemvalue="TestNG.AssertionTry.verifySomething" />
         <item itemvalue="TestNG.GetUsers.deleteData" />
         <item itemvalue="TestNG.GetUsers.digestAuthentication" />
         <item itemvalue="TestNG.GetUsers.basicAuthentication" />
-        <item itemvalue="TestNG.GetUsers" />
-        <item itemvalue="TestNG.GetUsers.getCookies" />
       </list>
     </recent_temporary>
   </component>
@@ -255,7 +261,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736833254980</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Created utility file to read test data from json and property file. Created a json test data file and a config.properties file. Updated test to get data from test files">
+      <option name="closed" value="true" />
+      <created>1737004871014</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1737004871014</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -268,6 +282,7 @@
     <MESSAGE value="Worked on cookies and header" />
     <MESSAGE value="Worked on cookies and basic auth" />
     <MESSAGE value="Created status code enum" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created status code enum" />
+    <MESSAGE value="Created utility file to read test data from json and property file. Created a json test data file and a config.properties file. Updated test to get data from test files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created utility file to read test data from json and property file. Created a json test data file and a config.properties file. Updated test to get data from test files" />
   </component>
 </project>
